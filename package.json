@@ -1,0 +1,30 @@
+{
+  "name": "learningjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiincs/learningjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shiincs/learningjs/issues"
+  },
+  "homepage": "https://github.com/shiincs/learningjs#readme",
+  "dependencies": {
+    "underscore": "^1.9.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.2",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint-plugin-import": "^2.11.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-eslint": "^4.0.2"
+  }
+}
