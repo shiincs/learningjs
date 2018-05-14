@@ -239,7 +239,7 @@ car1.addInsurancePolicy(new InsurancePolicy());
 //이 방법을 쓰면 makeInsurable의 보험 관련 메서드들이 Car 클래스에 정의된 것처럼 작동한다.
 
 //서로 다른 클래스 간에 메서드가 충돌하는 경우를 방지하기 위해 심볼을 사용
-class Insurance Policy {}
+/* class Insurance Policy {}
 const ADD_POLICY = Symbol();
 const GET_POLICY = Symbol();
 const IS_INSURED = Symbol();
@@ -248,4 +248,4 @@ function makeInsurable(o) {
     o[ADD_POLICY] = function(p) { this[_POLICY] = p; }
     o[GET_POLICY] = function() { return this[_POLICY]; }
     o[IS_INSURED] = function() { return !!this[_POLICY]; }
-}
+} */
