@@ -27,6 +27,7 @@ const intervalId = setInterval(function() {
 */
 
 // 스코프와 비동기적 실행
+/*
 function countdown() {
     let i;  //let의 스코프가 for문 바깥에 있기 때문에 콜백에 의해 호출되는 i는 모두 같다.
     console.log("countdown:");
@@ -47,6 +48,7 @@ function countdown1() {
 }
 
 countdown1();
+*/
 
 // 오류 우선 콜백(error-first callback)
 /*
@@ -60,6 +62,7 @@ fs.readFile(fname, function(err, data) {
 */
 
 // 콜백 헬(callback hell)
+/*
 const fs = require('fs');
 
 fs.readFile('a.txt', function(err, dataA) {
@@ -88,3 +91,41 @@ function readSketchyFile() {
 }
 
 readSketchyFile();
+*/
+
+// 프라미스 만들기
+/*
+function countdown(seconds) {
+    return new Promise(function(resolve, reject) {
+        for(let i=seconds; i>=0; i--) {
+            setTimeout(function() {
+                if(i>0) console.log(i + '...');
+                else resolve(console.log("Go!"));
+            }, (seconds-i)*1000);
+        }
+    });
+}
+*/
+
+// 프라미스 사용
+const p = countdown(15);
+
+p.then(function() {
+    console.log("countdown completed successfully");
+});
+p.catch(function(err) {
+    console.log("countdown experienced an error: " + err.message);
+});
+
+// countdown 함수에서 에러 발생시키기
+function countdown(seconds) {
+    return new Promise(function(resolve, reject) {
+        for(let i=seconds; i>=0; i--) {
+            setTimeout(function() {
+                if(i===13) return reject(new Error("Oh my God!"));
+                if(i>0) console.log(i + '...');
+                else resolve(console.log("Go!"));
+            }, (seconds-i)*1000);
+        }
+    });
+}
